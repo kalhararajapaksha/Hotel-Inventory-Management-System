@@ -1,0 +1,6 @@
+E:\Assignment Hub\ML SLIIT\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.REF\bin\Debug\HotelMngt.REF.dll
+E:\Assignment Hub\ML SLIIT\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.REF\bin\Debug\HotelMngt.REF.pdb
+E:\Assignment Hub\ML SLIIT\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.REF\obj\Debug\HotelMngt.REF.csproj.AssemblyReference.cache
+E:\Assignment Hub\ML SLIIT\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.REF\obj\Debug\HotelMngt.REF.csproj.CoreCompileInputs.cache
+E:\Assignment Hub\ML SLIIT\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.REF\obj\Debug\HotelMngt.REF.dll
+E:\Assignment Hub\ML SLIIT\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.REF\obj\Debug\HotelMngt.REF.pdb
