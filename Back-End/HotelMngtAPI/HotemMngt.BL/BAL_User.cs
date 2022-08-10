@@ -11,6 +11,35 @@ namespace HotemMngt.BL
 {
     public class BAL_User
     {
+        public DataTable SelectByUserNameAndPassword(REF_User oREF_User, DB_Handle oDB_Handle)
+        {
+            DAL_User oDAL_User = new DAL_User();
+            DataTable oDataTable = new DataTable();
+            try
+            {
+                bool newDBHandle = false;
+                if (oDB_Handle == null)
+                {
+                    oDB_Handle = new DB_Handle();
+                    oDB_Handle.OpenConnection();
+                    oDB_Handle.BeginTransaction();
+                    newDBHandle = true;
+                }
+                oDataTable = oDAL_User.SelectByUserNameAndPassword(oREF_User, oDB_Handle);
+                if (newDBHandle)
+                {
+                    oDB_Handle.CommitTransaction();
+                    oDB_Handle.CloseConnection();
+                }
+            }
+            catch (Exception ex)
+            {
+                oDB_Handle.RollbackTransaction();
+                oDB_Handle.CloseConnection();
+                throw ex;
+            }
+            return oDataTable;
+        }
         public DataTable LoadUser(DB_Handle oDB_Handle)
         {
             DAL_User oDAL_User = new DAL_User();

@@ -29,5 +29,13 @@ namespace HotelMngtAPI
      RequestFormat = WebMessageFormat.Json,
      ResponseFormat = WebMessageFormat.Json)]
      string SaveUser(REF_User oREF_User);
+
+    [OperationContract]
+    [WebInvoke(Method = "POST",
+    UriTemplate = "UserLogin",
+    BodyStyle = WebMessageBodyStyle.Wrapped,
+    RequestFormat = WebMessageFormat.Json,
+    ResponseFormat = WebMessageFormat.Json)]
+    string GetUserByUserName(REF_User oREF_User);
     }
 }
