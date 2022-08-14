@@ -7,3 +7,12 @@ E:\Assignment Hub\ML SLIIT\Hotel-Inventory-Management-System\Back-End\HotelMngtA
 E:\Assignment Hub\ML SLIIT\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.DL\obj\Debug\HotelMngt.DL.csproj.CopyComplete
 E:\Assignment Hub\ML SLIIT\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.DL\obj\Debug\HotelMngt.DL.dll
 E:\Assignment Hub\ML SLIIT\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.DL\obj\Debug\HotelMngt.DL.pdb
+G:\Assignment Helpers hub\HIMS\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.DL\bin\Debug\HotelMngt.DL.dll
+G:\Assignment Helpers hub\HIMS\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.DL\bin\Debug\HotelMngt.DL.pdb
+G:\Assignment Helpers hub\HIMS\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.DL\bin\Debug\HotelMngt.REF.dll
+G:\Assignment Helpers hub\HIMS\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.DL\bin\Debug\HotelMngt.REF.pdb
+G:\Assignment Helpers hub\HIMS\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.DL\obj\Debug\HotelMngt.DL.csproj.AssemblyReference.cache
+G:\Assignment Helpers hub\HIMS\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.DL\obj\Debug\HotelMngt.DL.csproj.CoreCompileInputs.cache
+G:\Assignment Helpers hub\HIMS\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.DL\obj\Debug\HotelMngt.DL.csproj.CopyComplete
+G:\Assignment Helpers hub\HIMS\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.DL\obj\Debug\HotelMngt.DL.dll
+G:\Assignment Helpers hub\HIMS\Hotel-Inventory-Management-System\Back-End\HotelMngtAPI\HotelMngt.DL\obj\Debug\HotelMngt.DL.pdb

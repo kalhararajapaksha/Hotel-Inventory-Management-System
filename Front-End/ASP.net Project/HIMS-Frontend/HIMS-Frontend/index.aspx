@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     <!--Login Css -->
     <link href="../assets/css/login.css" rel="stylesheet">
-    
+
     <!-- latest jquery-->
     <script src="../assets/js/jquery-3.5.1.min.js"></script>
 </head>
@@ -28,7 +28,7 @@
         <div class="row">
             <div class="my_form">
 
-                <form id="form1" runat="server" onsubmit="login()">
+                <form id="form1">
                     <div class="mb-3 mt-3 form_head">
                         <h5>Hotel Inventory Management System</h5>
                         <p>Here you can Log into inventry Management System</p>
@@ -45,7 +45,8 @@
                         <a href="#">Forget Password</a>
                     </div>
                     <div>
-                        <input class="btn btn-primary submit_btn" type="submit" value="Login" />
+                        <input class="btn btn-primary submit_btn" type="button" value="Login" onclick="login()" />
+                        <%--<button class="btn btn-primary submit_btn" onclick="login()">Login</button>--%>
                     </div>
 
                 </form>
@@ -59,6 +60,8 @@
     </div>
     <!--Login javascript-->
     <script src="../assets/js/login/login.js"></script>
+    <!--sweet alert cdn-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

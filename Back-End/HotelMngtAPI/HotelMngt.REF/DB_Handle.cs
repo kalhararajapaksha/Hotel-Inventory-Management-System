@@ -17,7 +17,7 @@ namespace HotelMngt.REF
         private void CreateConnection()
         {
 
-            string dbConString = @"Data Source=.\SQLEXPRESS; Initial Catalog=HOTEL_DB;User ID=sa;Password=SLATS@123;Max Pool Size=1000; MultipleActiveResultSets=True;Integrated Security=True";
+            string dbConString = @"Data Source=GEETHAN-LAP\SQLEXPRESS;Initial Catalog=HOTEL_DB;Integrated Security=True";
             Console.WriteLine(dbConString);
             dbCon = new SqlConnection(dbConString);
 
