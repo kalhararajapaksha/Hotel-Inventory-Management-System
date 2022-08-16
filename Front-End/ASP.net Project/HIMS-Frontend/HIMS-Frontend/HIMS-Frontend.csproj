@@ -1728,7 +1728,12 @@
     <Content Include="assets\video\auth-bg.mp4" />
     <Content Include="Dashboard.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="ManageCategory.aspx" />
+    <Content Include="ManageItem.aspx" />
+    <Content Include="ManageSubCategory.aspx" />
     <Content Include="ManageUser.aspx" />
+    <Content Include="script\page\login.js" />
+    <Content Include="script\page\manageUserAccount.js" />
     <Content Include="UserAccounts.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -1746,6 +1751,27 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageCategory.aspx.cs">
+      <DependentUpon>ManageCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageCategory.aspx.designer.cs">
+      <DependentUpon>ManageCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageItem.aspx.cs">
+      <DependentUpon>ManageItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageItem.aspx.designer.cs">
+      <DependentUpon>ManageItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSubCategory.aspx.cs">
+      <DependentUpon>ManageSubCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageSubCategory.aspx.designer.cs">
+      <DependentUpon>ManageSubCategory.aspx</DependentUpon>
     </Compile>
     <Compile Include="ManageUser.aspx.cs">
       <DependentUpon>ManageUser.aspx</DependentUpon>

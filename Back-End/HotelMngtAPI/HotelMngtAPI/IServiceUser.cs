@@ -21,8 +21,15 @@ namespace HotelMngtAPI
      ResponseFormat = WebMessageFormat.Json)]
       string LoadAllUsers();
 
-
      [OperationContract]
+    [WebInvoke(Method = "GET",
+     UriTemplate = "LoadAllEmployee",
+     BodyStyle = WebMessageBodyStyle.Wrapped,
+     RequestFormat = WebMessageFormat.Json,
+     ResponseFormat = WebMessageFormat.Json)]
+        string LoadAllEmployee();
+
+        [OperationContract]
      [WebInvoke(Method = "POST",
      UriTemplate = "SaveUser",
      BodyStyle = WebMessageBodyStyle.Wrapped,

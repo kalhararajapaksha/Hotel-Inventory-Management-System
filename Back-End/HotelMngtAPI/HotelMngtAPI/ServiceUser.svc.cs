@@ -38,6 +38,23 @@ namespace HotelMngtAPI
                 return JsonConvert.SerializeObject("Error! Something went wrong. Please contact the system administrator.");
             }
         }
+        public string LoadAllEmployee()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                BAL_User oBAL_User = new BAL_User();
+
+                dt = oBAL_User.LoadAllEmployee(null);
+
+
+                return JsonConvert.SerializeObject(dt);
+            }
+            catch (Exception ex)
+            {
+                return ex.ToString();
+            }
+        }
 
         public string LoadAllUsers()
         {
@@ -64,11 +81,19 @@ namespace HotelMngtAPI
                 BAL_User oBAL_User = new BAL_User();                        
                 dt = oBAL_User.SaveUser(null, oREF_User);
 
-                return JsonConvert.SerializeObject(dt);
+                Response oResponse = new Response();
+                oResponse.Success = true;
+                oResponse.Message = "Success!";
+                return JsonConvert.SerializeObject(oResponse);
+
+                
             }
             catch (Exception ex)
             {
-                return ex.ToString();
+                Response oResponse = new Response();
+                oResponse.Success = false;
+                oResponse.Message = "Error! Something went wrong. Please contact the system administrator. (" + ex.Message + ")";
+                return JsonConvert.SerializeObject(oResponse);
             }
         }
         //Hello
