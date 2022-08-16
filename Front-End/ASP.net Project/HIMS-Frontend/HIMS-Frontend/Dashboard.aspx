@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="page-body">
+
         <!-- Container-fluid starts-->
         <div class="container-fluid dashboard-default-sec">
             <div class="row">
@@ -1046,5 +1046,5 @@
             </div>
         </div>
         <!-- Container-fluid Ends-->
-    </div>
+  
 </asp:Content>

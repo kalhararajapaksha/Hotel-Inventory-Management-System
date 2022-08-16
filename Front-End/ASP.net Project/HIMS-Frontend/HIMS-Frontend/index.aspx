@@ -59,7 +59,8 @@
         </div>
     </div>
     <!--Login javascript-->
-    <script src="../assets/js/login/login.js"></script>
+    <%--<script src="../assets/js/login/login.js"></script>--%>
+    <script src="../script/page/login.js"></script>
     <!--sweet alert cdn-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>

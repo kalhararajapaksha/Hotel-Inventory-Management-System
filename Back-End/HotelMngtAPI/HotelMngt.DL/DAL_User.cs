@@ -45,6 +45,31 @@ namespace HotelMngt.DL
             SqlDataAdapter oSqlDataAdapter;
             try
             {
+                sqlQuery = "SP_USER_SELECT_ALL";
+                oSqlCommand = new SqlCommand();
+                oSqlCommand.CommandText = sqlQuery;
+                oSqlCommand.CommandType = CommandType.StoredProcedure;
+                oSqlCommand.Connection = oDB_Handle.GetConnection();
+                oSqlCommand.Transaction = oDB_Handle.GetTransaction();
+                oSqlDataAdapter = new SqlDataAdapter(oSqlCommand);
+                oSqlDataAdapter.Fill(oDataTable);
+
+                return oDataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public DataTable LoadAllEmployee(DB_Handle oDB_Handle)
+        {
+            string sqlQuery;
+            DataTable oDataTable = new DataTable();
+            SqlCommand oSqlCommand;
+            SqlDataAdapter oSqlDataAdapter;
+            try
+            {
                 sqlQuery = "SP_EMPLOYEE_GETALL";
                 oSqlCommand = new SqlCommand();
                 oSqlCommand.CommandText = sqlQuery;
