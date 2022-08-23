@@ -16,6 +16,8 @@ namespace HotelMngtAPI
     // NOTE: In order to launch WCF Test Client for testing this service, please select ServiceUser.svc or ServiceUser.svc.cs at the Solution Explorer and start debugging.
     public class ServiceUser : IServiceUser
     {
+
+        #region SELECT
         public string GetUserByUserName(REF_User oREF_User)
         {
             try
@@ -25,16 +27,16 @@ namespace HotelMngtAPI
 
                 DataTable dt;
                 dt = oBAL_User.SelectByUserNameAndPassword(oREF_User, null);
-              //  Response oResponse = new Response();
-               // oResponse.Success = true;
+                //  Response oResponse = new Response();
+                // oResponse.Success = true;
                 //oResponse.oDataTable = dt;
                 return JsonConvert.SerializeObject(dt);
             }
             catch (Exception ex)
             {
-               // Response oResponse = new Response();
-              //  oResponse.Success = false;
-               // oResponse.Message = "Error! Something went wrong. Please contact the system administrator. (" + ex.Message + ")";
+                // Response oResponse = new Response();
+                //  oResponse.Success = false;
+                // oResponse.Message = "Error! Something went wrong. Please contact the system administrator. (" + ex.Message + ")";
                 return JsonConvert.SerializeObject("Error! Something went wrong. Please contact the system administrator.");
             }
         }
@@ -72,13 +74,37 @@ namespace HotelMngtAPI
                 return ex.ToString();
             }
         }
+        public string UserGetByID(REF_User oREF_User)
+        {
+            try
+            {
+                BAL_User oBAL_User = new BAL_User();
 
+
+                DataTable dt;
+                dt = oBAL_User.SelectByUserID(oREF_User, null);
+                Response oResponse = new Response();
+                oResponse.Success = true;
+                oResponse.oDataTable = dt;
+                return JsonConvert.SerializeObject(oResponse);
+            }
+            catch (Exception ex)
+            {
+                Response oResponse = new Response();
+                oResponse.Success = false;
+                oResponse.Message = "Error! Something went wrong. Please contact the system administrator. (" + ex.Message + ")";
+                return JsonConvert.SerializeObject("Error! Something went wrong. Please contact the system administrator.");
+            }
+        }
+        #endregion
+
+        #region INSERT
         public string SaveUser(REF_User oREF_User)
         {
             DataTable dt = new DataTable();
             try
             {
-                BAL_User oBAL_User = new BAL_User();                        
+                BAL_User oBAL_User = new BAL_User();
                 dt = oBAL_User.SaveUser(null, oREF_User);
 
                 Response oResponse = new Response();
@@ -86,7 +112,7 @@ namespace HotelMngtAPI
                 oResponse.Message = "Success!";
                 return JsonConvert.SerializeObject(oResponse);
 
-                
+
             }
             catch (Exception ex)
             {
@@ -96,6 +122,64 @@ namespace HotelMngtAPI
                 return JsonConvert.SerializeObject(oResponse);
             }
         }
-        //Hello
+        #endregion
+
+        #region UPDATE
+        public string DeleteUser(REF_User oREF_User)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                BAL_User oBAL_User = new BAL_User();
+                dt = oBAL_User.DeleteUser(null, oREF_User);
+
+                Response oResponse = new Response();
+                oResponse.Success = true;
+                oResponse.Message = "Success!";
+                return JsonConvert.SerializeObject(oResponse);
+
+
+            }
+            catch (Exception ex)
+            {
+                Response oResponse = new Response();
+                oResponse.Success = false;
+                oResponse.Message = "Error! Something went wrong. Please contact the system administrator. (" + ex.Message + ")";
+                return JsonConvert.SerializeObject(oResponse);
+            }
+        }
+
+
+
+
+
+        public string UpdateUser(REF_User oREF_User)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                BAL_User oBAL_User = new BAL_User();
+                dt = oBAL_User.UpdateUser(null, oREF_User);
+
+                Response oResponse = new Response();
+                oResponse.Success = true;
+                oResponse.Message = "Success!";
+                return JsonConvert.SerializeObject(oResponse);
+
+
+            }
+            catch (Exception ex)
+            {
+                Response oResponse = new Response();
+                oResponse.Success = false;
+                oResponse.Message = "Error! Something went wrong. Please contact the system administrator. (" + ex.Message + ")";
+                return JsonConvert.SerializeObject(oResponse);
+            }
+        }
+        #endregion
+
+        #region DELETE
+        #endregion
+        
     }
 }

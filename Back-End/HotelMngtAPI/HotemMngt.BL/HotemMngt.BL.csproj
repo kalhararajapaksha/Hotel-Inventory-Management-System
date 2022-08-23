@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BAL_Category.cs" />
+    <Compile Include="BAL_Department.cs" />
+    <Compile Include="BAL_Order.cs" />
+    <Compile Include="BAL_Stock.cs" />
     <Compile Include="BAL_User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
