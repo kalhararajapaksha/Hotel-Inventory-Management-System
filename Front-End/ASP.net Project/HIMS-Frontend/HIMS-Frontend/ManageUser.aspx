@@ -104,6 +104,7 @@
                                 </div>
                             </div>
                           </div>
+                            <input class="form-control" id="txtHide" type="password" value="0" hidden>
                           <div class="modal-footer text-center" id="btndivcat">
                             <button class="btn btn-secondary" type="button" onclick="btnClose()" data-bs-dismiss="modal">Close</button>
                             <button class="btn btn-primary" id="btnSubmit" onclick="SaveUser()" type="button">Save Category</button>

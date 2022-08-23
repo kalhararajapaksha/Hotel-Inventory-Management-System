@@ -11,6 +11,7 @@ namespace HotelMngt.DL
 {
     public class DAL_User
     {
+        #region SELECT
         public DataTable SelectByUserNameAndPassword(REF_User oREF_User, DB_Handle oDB_Handle)
         {
             string sqlQuery;
@@ -24,6 +25,32 @@ namespace HotelMngt.DL
                 oSqlCommand = new SqlCommand();
                 oSqlCommand.Parameters.AddWithValue("@UserName", oREF_User.UserName);
                 oSqlCommand.Parameters.AddWithValue("@Password", oREF_User.Password);
+                oSqlCommand.CommandText = sqlQuery;
+                oSqlCommand.CommandType = CommandType.StoredProcedure;
+                oSqlCommand.Connection = oDB_Handle.GetConnection();
+                oSqlCommand.Transaction = oDB_Handle.GetTransaction();
+                oSqlDataAdapter = new SqlDataAdapter(oSqlCommand);
+                oSqlDataAdapter.Fill(oDataTable);
+                return oDataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public DataTable SelectByUserID(REF_User oREF_User, DB_Handle oDB_Handle)
+        {
+            string sqlQuery;
+            DataTable oDataTable = new DataTable();
+            SqlCommand oSqlCommand;
+            SqlDataAdapter oSqlDataAdapter;
+            try
+            {
+                sqlQuery = "SP_USER_GET_BY_ID";
+
+                oSqlCommand = new SqlCommand();
+                oSqlCommand.Parameters.AddWithValue("@UserID", oREF_User.UserID);
                 oSqlCommand.CommandText = sqlQuery;
                 oSqlCommand.CommandType = CommandType.StoredProcedure;
                 oSqlCommand.Connection = oDB_Handle.GetConnection();
@@ -87,6 +114,9 @@ namespace HotelMngt.DL
             }
         }
 
+        #endregion
+
+        #region INSERT
         public DataTable SaveUser(DB_Handle oDB_Handle, REF_User oREF_User)
         {
             string sqlQuery;
@@ -119,5 +149,68 @@ namespace HotelMngt.DL
                 throw ex;
             }
         }
+        #endregion
+
+        #region UPDATE
+        public DataTable UpdateUser(DB_Handle oDB_Handle, REF_User oREF_User)
+        {
+            string sqlQuery;
+            DataTable oDataTable = new DataTable();
+            SqlCommand oSqlCommand;
+            SqlDataAdapter oSqlDataAdapter;
+            try
+            {
+                sqlQuery = "SP_USER_UPDATE";
+                oSqlCommand = new SqlCommand();
+                oSqlCommand.Parameters.AddWithValue("@UserID", oREF_User.UserID);
+                oSqlCommand.Parameters.AddWithValue("@UserName", oREF_User.UserName);
+                oSqlCommand.Parameters.AddWithValue("@Password", oREF_User.Password);
+                oSqlCommand.Parameters.AddWithValue("@ModifyBy", oREF_User.ModifyBy);
+                oSqlCommand.CommandText = sqlQuery;
+                oSqlCommand.CommandType = CommandType.StoredProcedure;
+                oSqlCommand.Connection = oDB_Handle.GetConnection();
+                oSqlCommand.Transaction = oDB_Handle.GetTransaction();
+                oSqlDataAdapter = new SqlDataAdapter(oSqlCommand);
+                oSqlDataAdapter.Fill(oDataTable);
+
+                return oDataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public DataTable DeleteUser(DB_Handle oDB_Handle, REF_User oREF_User)
+        {
+            string sqlQuery;
+            DataTable oDataTable = new DataTable();
+            SqlCommand oSqlCommand;
+            SqlDataAdapter oSqlDataAdapter;
+            try
+            {
+                sqlQuery = "SP_USER_DELETE";
+                oSqlCommand = new SqlCommand();
+                oSqlCommand.Parameters.AddWithValue("@UserID", oREF_User.UserID);
+                oSqlCommand.Parameters.AddWithValue("@ModifyBy", oREF_User.ModifyBy);
+                oSqlCommand.CommandText = sqlQuery;
+                oSqlCommand.CommandType = CommandType.StoredProcedure;
+                oSqlCommand.Connection = oDB_Handle.GetConnection();
+                oSqlCommand.Transaction = oDB_Handle.GetTransaction();
+                oSqlDataAdapter = new SqlDataAdapter(oSqlCommand);
+                oSqlDataAdapter.Fill(oDataTable);
+
+                return oDataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region DELETE
+        #endregion
+
     }
 }

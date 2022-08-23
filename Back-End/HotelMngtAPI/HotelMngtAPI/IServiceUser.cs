@@ -13,36 +13,74 @@ namespace HotelMngtAPI
     [ServiceContract]
     public interface IServiceUser
     {
-     [OperationContract]
-     [WebInvoke(Method = "GET",
-     UriTemplate = "LoadAllUsers",
-     BodyStyle = WebMessageBodyStyle.Wrapped,
-     RequestFormat = WebMessageFormat.Json,
-     ResponseFormat = WebMessageFormat.Json)]
-      string LoadAllUsers();
-
-     [OperationContract]
-    [WebInvoke(Method = "GET",
-     UriTemplate = "LoadAllEmployee",
-     BodyStyle = WebMessageBodyStyle.Wrapped,
-     RequestFormat = WebMessageFormat.Json,
-     ResponseFormat = WebMessageFormat.Json)]
-        string LoadAllEmployee();
+      
+        #region SELECT
+        [OperationContract]
+        [WebInvoke(Method = "GET",
+        UriTemplate = "LoadAllUsers",
+        BodyStyle = WebMessageBodyStyle.Wrapped,
+        RequestFormat = WebMessageFormat.Json,
+        ResponseFormat = WebMessageFormat.Json)]
+        string LoadAllUsers();
 
         [OperationContract]
-     [WebInvoke(Method = "POST",
-     UriTemplate = "SaveUser",
-     BodyStyle = WebMessageBodyStyle.Wrapped,
-     RequestFormat = WebMessageFormat.Json,
-     ResponseFormat = WebMessageFormat.Json)]
-     string SaveUser(REF_User oREF_User);
+        [WebInvoke(Method = "POST",
+        UriTemplate = "UserGetByID",
+        BodyStyle = WebMessageBodyStyle.Wrapped,
+        RequestFormat = WebMessageFormat.Json,
+        ResponseFormat = WebMessageFormat.Json)]
+        string UserGetByID(REF_User oREF_User);
 
-    [OperationContract]
-    [WebInvoke(Method = "POST",
-    UriTemplate = "UserLogin",
-    BodyStyle = WebMessageBodyStyle.Wrapped,
-    RequestFormat = WebMessageFormat.Json,
-    ResponseFormat = WebMessageFormat.Json)]
-    string GetUserByUserName(REF_User oREF_User);
+        [OperationContract]
+        [WebInvoke(Method = "GET",
+        UriTemplate = "LoadAllEmployee",
+        BodyStyle = WebMessageBodyStyle.Wrapped,
+        RequestFormat = WebMessageFormat.Json,
+        ResponseFormat = WebMessageFormat.Json)]
+        string LoadAllEmployee();
+
+        #endregion
+
+        #region INSERT
+        [OperationContract]
+        [WebInvoke(Method = "POST",
+        UriTemplate = "SaveUser",
+        BodyStyle = WebMessageBodyStyle.Wrapped,
+        RequestFormat = WebMessageFormat.Json,
+        ResponseFormat = WebMessageFormat.Json)]
+        string SaveUser(REF_User oREF_User);
+        #endregion
+
+        #region UPDATE
+        [OperationContract]
+        [WebInvoke(Method = "POST",
+        UriTemplate = "UpdateUser",
+        BodyStyle = WebMessageBodyStyle.Wrapped,
+        RequestFormat = WebMessageFormat.Json,
+        ResponseFormat = WebMessageFormat.Json)]
+        string UpdateUser(REF_User oREF_User);
+
+        [OperationContract]
+        [WebInvoke(Method = "POST",
+        UriTemplate = "DeleteUser",
+        BodyStyle = WebMessageBodyStyle.Wrapped,
+        RequestFormat = WebMessageFormat.Json,
+        ResponseFormat = WebMessageFormat.Json)]
+        string DeleteUser(REF_User oREF_User);
+        #endregion
+
+        #region AUTH
+        [OperationContract]
+        [WebInvoke(Method = "POST",
+        UriTemplate = "UserLogin",
+        BodyStyle = WebMessageBodyStyle.Wrapped,
+        RequestFormat = WebMessageFormat.Json,
+        ResponseFormat = WebMessageFormat.Json)]
+        string GetUserByUserName(REF_User oREF_User);
+        #endregion
+
+
+
+
     }
 }
