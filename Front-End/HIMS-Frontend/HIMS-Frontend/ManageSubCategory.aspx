@@ -41,16 +41,14 @@
                         <div class="row post">
 
                             <div class="table-responsive">
-                                <table id="tblCategory" class="show-case">
+                                <table id="tblSubCategory" class="show-case">
                                     <thead>
                                         <tr>
                                             <th style="width: 16.6%">ID</th>
                                             <th style="width: 16.6%">Category</th>
                                             <th style="width: 16.6%">Unit</th>
                                             <th style="width: 16.6%" class="text-center py-0 align-middle">Sub Category Name</th>
-                                            <th style="width: 16.6%" >Create Date</th>
-                                            <th style="width: 16.6%" >Modify Date</th>
-
+                                             <th style="width: 16.6%">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -112,5 +110,6 @@
             </div>
         </div>
     </div>
+    <script src="../script/page/manageSubCategory.js"></script>
     <!--Model End-->
 </asp:Content>

@@ -44,12 +44,13 @@
                                 <table id="tblCategory" class="show-case">
                                     <thead>
                                         <tr>
-                                            <th style="width: 16.7%">Category ID</th>
-                                            <th style="width: 16.7%">Name</th>
-                                            <th style="width: 16.7%">Create Date</th>
+                                            <th>Category ID</th>
+                                            <th>Name</th>
+                                            <th>Action</th>
+                                           <%-- <th style="width: 16.7%">Create Date</th>
                                             <th style="width: 16.7%" class="text-center py-0 align-middle">Modify Date</th>
                                             <th style="width: 16.7%" class="text-center py-0 align-middle">Update</th>
-                                            <th style="width: 16.7%" class="text-center py-0 align-middle">Delete</th>
+                                            <th style="width: 16.7%" class="text-center py-0 align-middle">Delete</th>--%>
 
                                         </tr>
                                     </thead>
@@ -104,5 +105,6 @@
             </div>
         </div>
     </div>
+    <script src="../script/page/ManageCategory.js"></script>
     <!--Modal End-->
 </asp:Content>

@@ -18,6 +18,7 @@ namespace HotelMngt.REF
         public string IssuedDateAndTime { get; set; }
         public string ApprovedDate { get; set; }
         public int ApprovedBy { get; set; }
+        public int IssuedBy { get; set; }
 
 
     }

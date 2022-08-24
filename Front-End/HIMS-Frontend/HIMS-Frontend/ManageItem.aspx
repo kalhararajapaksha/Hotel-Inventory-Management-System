@@ -41,16 +41,17 @@
                         <div class="row post">
 
                             <div class="table-responsive">
-                                <table id="tblCategory" class="show-case">
+                                <table id="tblItem" class="show-case">
                                     <thead>
                                         <tr>
-                                            <th style="width: 16.6%">Item ID</th>
-                                            <th style="width: 16.6%">Category</th>
-                                            <th style="width: 16.6%" >Sub Category</th>
-                                            <th style="width: 16.6%" class="text-center py-0 align-middle">Unit</th>
-                                            <th style="width: 16.6%">Quentity</th>
-                                            <th style="width: 16.6%">Last Update date</th>
-
+                                            <th>Item ID</th>
+                                           <%-- <th style="width: 16.6%">Category</th>--%>
+                                            <th>Sub Category</th>
+                                          <%--  <th style="width: 16.6%" class="text-center py-0 align-middle">Unit</th>--%>
+                                            <th>Quentity</th>
+                                           <%-- <th style="width: 16.6%">Last Update date</th>--%>
+                                            <th>Item Name</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -117,5 +118,6 @@
             </div>
         </div>
     </div>
+    <script src="../script/page/manageItem.js"></script>
     <!--Modal End-->
 </asp:Content>

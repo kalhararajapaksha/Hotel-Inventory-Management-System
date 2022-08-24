@@ -13,6 +13,7 @@ namespace HotelMngt.REF
         public int QTY { get; set; }
         public string LastUpdateDate { get; set; }
         public int UpdateBy { get; set; }
+        public string ItemName { get; set; }
 
 
     }

@@ -35,92 +35,95 @@ function SaveUser() {
     var userName = $('#lname').val();
     var password1 = $('#exampleInputPassword1').val();
     var password2 = $('#exampleInputcPassword2').val();
+    if (password1 == password2 && password1 != "" && userName != "" && empID != 0) {
+        $('#reqMsg').text("");
+        if (userID == 0) {
+            $.ajax({
+                type: 'POST',
+                url: "http://localhost:44372/ServiceUser.svc/SaveUser",
+                "data": JSON.stringify({
+                    "oREF_User": {
+                        "UserID": 0,
+                        "EmployeeID": empID,
+                        "UserName": userName,
+                        "Password": password1,
+                        "CreateBy": 1000,
+                        "ModifyDate": "",
+                        "ModifyBy": 0,
+                        "Satus": 1
+                    }
+                }),
+                contentType: "application/json; charset=utf-8",
+                dataType: 'json',
+                success: function (oResponse) {
+                    console.log(oResponse)
+                    var ojson = JSON.parse(oResponse.SaveUserResult);
+                    console.log(ojson)
+                    if (ojson.Success) {
+                        LoadTable();
+                        swal(ojson.Message, {
+                            icon: "success",
+                        });
 
-    if (userID == 0) {
-        $.ajax({
-            type: 'POST',
-            url: "http://localhost:44372/ServiceUser.svc/SaveUser",
-            "data": JSON.stringify({
-                "oREF_User": {
-                    "UserID": 0,
-                    "EmployeeID": empID,
-                    "UserName": userName,
-                    "Password": password1,
-                    "CreateBy": 1000,
-                    "ModifyDate": "",
-                    "ModifyBy": 0,
-                    "Satus": 1
+                    } else {
+
+                        swal(ojson.Message, {
+                            icon: "error",
+                        });
+                    }
                 }
-            }),
-            contentType: "application/json; charset=utf-8",
-            dataType: 'json',
-            success: function (oResponse) {
-                console.log(oResponse)
-                var ojson = JSON.parse(oResponse.SaveUserResult);
-                console.log(ojson)
-                if (ojson.Success) {
-                    LoadTable();
-                    swal(ojson.Message, {
-                        icon: "success",
-                    });
-
-                } else {
-
-                    swal(ojson.Message, {
+                ,
+                error: function (xhr, status, error) {
+                    swal("Something went wrong. Please contact the system administrator." + error.status + ": " + xhr.responseJSON.Message + "", {
                         icon: "error",
                     });
                 }
-            }
-            ,
-            error: function (xhr, status, error) {
-                swal("Something went wrong. Please contact the system administrator." + error.status + ": " + xhr.responseJSON.Message + "", {
-                    icon: "error",
-                });
-            }
-        });
-    }
-    else {
-        $.ajax({
-            type: 'POST',
-            url: "http://localhost:44372/ServiceUser.svc/UpdateUser",
-            "data": JSON.stringify({
-                "oREF_User": {
-                    "UserID": userID,
-                    "UserName": userName,
-                    "Password": password1,                 
-                    "ModifyBy": 1,            
+            });
+        }
+        else {
+            $.ajax({
+                type: 'POST',
+                url: "http://localhost:44372/ServiceUser.svc/UpdateUser",
+                "data": JSON.stringify({
+                    "oREF_User": {
+                        "UserID": userID,
+                        "UserName": userName,
+                        "Password": password1,
+                        "ModifyBy": 1,
+                    }
+                }),
+                contentType: "application/json; charset=utf-8",
+                dataType: 'json',
+                success: function (oResponse) {
+                    console.log(oResponse)
+                    var ojson = JSON.parse(oResponse.UpdateUserResult);
+                    console.log(ojson)
+                    if (ojson.Success) {
+                        $('#txtHide').val(userID);
+                        LoadTable();
+                        swal(ojson.Message, {
+                            icon: "success",
+                        });
+
+                    } else {
+
+                        swal(ojson.Message, {
+                            icon: "error",
+                        });
+                    }
                 }
-            }),
-            contentType: "application/json; charset=utf-8",
-            dataType: 'json',
-            success: function (oResponse) {
-                console.log(oResponse)
-                var ojson = JSON.parse(oResponse.UpdateUserResult);
-                console.log(ojson)
-                if (ojson.Success) {
-                    $('#txtHide').val(userID);
-                    LoadTable();
-                    swal(ojson.Message, {
-                        icon: "success",
-                    });
-
-                } else {
-
-                    swal(ojson.Message, {
+                ,
+                error: function (xhr, status, error) {
+                    swal("Something went wrong. Please contact the system administrator." + error.status + ": " + xhr.responseJSON.Message + "", {
                         icon: "error",
                     });
                 }
-            }
-            ,
-            error: function (xhr, status, error) {
-                swal("Something went wrong. Please contact the system administrator." + error.status + ": " + xhr.responseJSON.Message + "", {
-                    icon: "error",
-                });
-            }
-        });
+            });
 
+        }
+    } else {
+        $('#reqMsg').text("Please fill required fields");
     }
-
   
 }
 

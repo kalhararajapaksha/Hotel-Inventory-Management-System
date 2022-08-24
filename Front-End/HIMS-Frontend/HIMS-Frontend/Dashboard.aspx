@@ -9,7 +9,183 @@
             <div class="row">
                 <div class="col-xl-5 box-col-12 des-xl-100">
                     <div class="row">
-                        <div class="col-xl-12 col-md-6 box-col-6 des-xl-50">
+                          <div class="col-xl-12 recent-order-sec">
+                        <div class="card">
+                            <div class="card-header pb-0 d-flex justify-content-between align-items-center">
+                                <h5>Recent Maintenance</h5>
+                                <div class="setting-list">
+                                    <%--<ul class="list-unstyled setting-option">
+                                        <li>
+                                            <div class="setting-primary"><i class="icon-settings"></i></div>
+                                        </li>
+                                        <li><i class="view-html fa fa-code font-primary"></i></li>
+                                        <li><i class="icofont icofont-maximize full-card font-primary"></i></li>
+                                        <li><i class="icofont icofont-minus minimize-card font-primary"></i></li>
+                                        <li><i class="icofont icofont-refresh reload-card font-primary"></i></li>
+                                        <li><i class="icofont icofont-error close-card font-primary"></i></li>
+                                    </ul>--%>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="user-status table-responsive">
+                                    <table class="table table-bordernone" >
+<%--                                        <thead>
+                                            <tr>
+                                                <th scope="col">Details</th>
+<%--                                                <th scope="col">Quantity</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Price</th>
+                                            </tr>
+                                        </thead>--%>
+                                        <tbody id="tbBody">
+<%--                                           <tr>
+                                                <td class="f-w-600">Created GatePasses</td>
+
+                                                <td>
+                                                    <div class="span badge rounded-pill pill-badge-secondary">6523</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="f-w-600">Created Returnable GatePasses</td>
+
+                                                <td>
+                                                    <div class="span badge rounded-pill pill-badge-success">6523</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="f-w-600">Created Non-Returnable</td>
+
+                                                <td>
+                                                    <div class="span badge rounded-pill pill-badge-warning">6523</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="f-w-600">Approved</td>
+
+                                                <td>
+                                                    <div class="span badge rounded-pill pill-badge-primary">6523</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="f-w-600">Check-out</td>
+
+                                                <td>
+                                                    <div class="span badge rounded-pill pill-badge-danger">6523</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="f-w-600">Store-In</td>
+
+                                                <td>
+                                                    <div class="span badge rounded-pill pill-badge-info">6523</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="f-w-600">Pending Actions</td>
+
+                                                <td>
+                                                    <div class="span badge rounded-pill pill-badge-primary">6523</div>
+                                                </td>
+                                            </tr>--%>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="code-box-copy">
+                                    <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#products-cart" title="Copy"><i class="icofont icofont-copy-alt"></i></button>
+                                    <pre><code class="language-html" id="products-cart">&lt;div class="card"&gt;
+ &lt;div class="card-header pb-0 d-flex justify-content-between align-items-center"&gt;
+   &lt;h5&gt;PRODUCTS CART&lt;/h5&gt;
+   &lt;div class="setting-list"&gt;
+     &lt;ul class="list-unstyled setting-option"&gt;
+       &lt;li&gt;
+         &lt;div class="setting-primary"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/div&gt;
+       &lt;/li&gt;
+       &lt;li&gt;&lt;i class="view-html fa fa-code font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;i class="icofont icofont-maximize full-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;i class="icofont icofont-minus minimize-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;i class="icofont icofont-refresh reload-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;i class="icofont icofont-error close-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+     &lt;/ul&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="card-body"&gt;
+   &lt;div class="user-status table-responsive"&gt;
+     &lt;table class="table table-bordernone"&gt;
+       &lt;thead&gt;
+         &lt;tr&gt;
+           &lt;th scope="col"&gt;Details&lt;/th&gt;
+           &lt;th scope="col"&gt;Quantity&lt;/th&gt;
+           &lt;th scope="col"&gt;Status&lt;/th&gt;
+           &lt;th scope="col"&gt;Price&lt;/th&gt;
+         &lt;/tr&gt;
+       &lt;/thead&gt;
+       &lt;tbody&gt;
+         &lt;tr&gt;
+           &lt;td class="f-w-600"&gt;Simply dummy text of the printing&lt;/td&gt;
+           &lt;td&gt;1&lt;/td&gt;
+           &lt;td class="font-primary"&gt;Pending&lt;/td&gt;
+           &lt;td&gt;
+             &lt;div class="span badge rounded-pill pill-badge-secondary"&gt;6523&lt;/div&gt;
+           &lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+           &lt;td class="f-w-600"&gt;Long established&lt;/td&gt;
+           &lt;td&gt;5&lt;/td&gt;
+           &lt;td class="font-secondary"&gt;Cancle&lt;/td&gt;
+           &lt;td&gt;
+             &lt;div class="span badge rounded-pill pill-badge-success"&gt;6523&lt;/div&gt;
+           &lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+           &lt;td class="f-w-600"&gt;sometimes by accident&lt;/td&gt;
+           &lt;td&gt;10&lt;/td&gt;
+           &lt;td class="font-secondary"&gt;Cancle&lt;/td&gt;
+           &lt;td&gt;
+             &lt;div class="span badge rounded-pill pill-badge-warning"&gt;6523&lt;/div&gt;
+           &lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+           &lt;td class="f-w-600"&gt;Classical Latin literature&lt;/td&gt;
+           &lt;td&gt;9&lt;/td&gt;
+           &lt;td class="font-primary"&gt;Return&lt;/td&gt;
+           &lt;td&gt;
+             &lt;div class="span badge rounded-pill pill-badge-primary"&gt;6523&lt;/div&gt;
+           &lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+           &lt;td class="f-w-600"&gt;keep the site on the Internet&lt;/td&gt;
+           &lt;td&gt;8&lt;/td&gt;
+           &lt;td class="font-primary"&gt;Pending&lt;/td&gt;
+           &lt;td&gt;
+               &lt;div class="span badge rounded-pill pill-badge-danger"&gt;6523&lt;/div&gt;
+           &lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+             &lt;td class="f-w-600"&gt;Molestiae consequatur&lt;/td&gt;
+             &lt;td&gt;3&lt;/td&gt;
+             &lt;td class="font-secondary"&gt;Cancle&lt;/td&gt;
+             &lt;td&gt;
+               &lt;div class="span badge rounded-pill pill-badge-info"&gt;6523&lt;/div&gt;
+             &lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+           &lt;td class="f-w-600"&gt;Pain can procure&lt;/td&gt;
+           &lt;td&gt;8&lt;/td&gt;
+           &lt;td class="font-primary"&gt;Return&lt;/td&gt;
+           &lt;td&gt;
+             &lt;div class="span badge rounded-pill pill-badge-primary"&gt;6523&lt;/div&gt;
+           &lt;/td&gt;
+         &lt;/tr&gt;
+       &lt;/tbody&gt;
+     &lt;/table&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <%--<div class="col-xl-12 col-md-6 box-col-6 des-xl-50">
                             <div class="card profile-greeting">
                                 <div class="card-header">
                                     <div class="header-top">
@@ -72,7 +248,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>--%>
                         <div class="col-xl-6 col-md-3 col-sm-6 box-col-3 des-xl-25 rate-sec">
                             <div class="card income-card card-primary">
                                 <div class="card-body text-center">
@@ -90,9 +266,9 @@
                                             </g>
                                         </svg>
                                     </div>
-                                    <h5>8,50,49</h5>
-                                    <p>Our Annual Income</p>
-                                    <a class="btn-arrow arrow-primary" href="javascript:void(0)"><i class="toprightarrow-primary fa fa-arrow-up me-2"></i>95.54% </a>
+                                    <h5 id="itemStock">8,50,49</h5>
+                                    <p>Stock</p>
+                                    
                                     <div class="parrten">
                                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 448.057 448.057" style="enable-background: new 0 0 448.057 448.057;" xml:space="preserve">
                                             <g>
@@ -122,9 +298,9 @@
                                             </g>
                                         </svg>
                                     </div>
-                                    <h5>2,03,59</h5>
-                                    <p>our Annual losses</p>
-                                    <a class="btn-arrow arrow-secondary" href="javascript:void(0)"><i class="toprightarrow-secondary fa fa-arrow-up me-2"></i>90.54% </a>
+                                    <h5 id="orderCount">2,03,59</h5>
+                                    <p>Orders</p>
+                                   
                                     <div class="parrten">
                                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 512 512" style="enable-background: new 0 0 512 512;" xml:space="preserve">
                                             <g>
@@ -140,7 +316,72 @@
                     </div>
                 </div>
                 <div class="col-xl-7 box-col-12 des-xl-100 dashboard-sec">
-                    <div class="card income-card">
+                     <div class="card">
+                                <div class="card-header">
+                                    <div class="header-top d-sm-flex align-items-center">
+                                        <h5>Reservation</h5>
+                                        <div class="center-content">
+                                            <p>Yearly User 24.65k</p>
+                                        </div>
+                                        <div class="setting-list">
+                                            <ul class="list-unstyled setting-option">
+                                                <li>
+                                                    <div class="setting-primary"><i class="icon-settings"></i></div>
+                                                </li>
+                                                <li><i class="view-html fa fa-code font-primary"></i></li>
+                                                <li><i class="icofont icofont-maximize full-card font-primary"></i></li>
+                                                <li><i class="icofont icofont-minus minimize-card font-primary"></i></li>
+                                                <li><i class="icofont icofont-refresh reload-card font-primary"></i></li>
+                                                <li><i class="icofont icofont-error close-card font-primary"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div id="user-activation-dash-2"></div>
+                                    <div class="code-box-copy">
+                                        <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#user-activations" title="Copy"><i class="icofont icofont-copy-alt"></i></button>
+                                        <pre><code class="language-html" id="user-activations">&lt;div class="card"&gt;
+   &lt;div class="card-header"&gt;
+     &lt;div class="header-top d-sm-flex align-items-center"&gt;
+       &lt;h5&gt;User Activations&lt;/h5&gt;
+       &lt;div class="center-content"&gt;
+         &lt;p&gt;Yearly User 24.65k&lt;/p&gt;
+       &lt;/div&gt;
+       &lt;div class="setting-list"&gt;
+           &lt;ul class="list-unstyled setting-option"&gt;
+             &lt;li&gt;
+               &lt;div class="setting-primary"&gt;
+                 &lt;i class="icon-settings"&gt;&lt;/i&gt;
+               &lt;/div&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+               &lt;i class="view-html fa fa-code font-primary"&gt;&lt;/i&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+               &lt;i class="icofont icofont-maximize full-card font-primary"&gt;&lt;/i&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+               &lt;i class="icofont icofont-minus minimize-card font-primary"&gt;&lt;/i&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+               &lt;i class="icofont icofont-refresh reload-card font-primary"&gt;&lt;/i&gt;
+             &lt;/li&gt;
+             &lt;li&gt;
+               &lt;i class="icofont icofont-error close-card font-primary"&gt;&lt;/i&gt;
+             &lt;/li&gt;
+           &lt;/ul&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class="card-body p-0"&gt;
+     &lt;div id="user-activation-dash-2"&gt;&lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                    <%--<div class="card income-card">
                         <div class="card-header">
                             <div class="header-top d-sm-flex align-items-center">
                                 <h5>Sales overview</h5>
@@ -194,9 +435,10 @@
 &lt;/div&gt;</code></pre>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
                 </div>
-                <div class="col-xl-8 box-col-12 des-xl-100">
+
+<%--                <div class="col-xl-8 box-col-12 des-xl-100">
                     <div class="row">
                         <div class="col-xl-6 col-50 box-col-6 des-xl-50">
                             <div class="card">
@@ -1042,9 +1284,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>--%>
             </div>
         </div>
         <!-- Container-fluid Ends-->
-  
+    <script src="../script/page/dashboard.js"></script>
 </asp:Content>
