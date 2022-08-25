@@ -30,8 +30,8 @@
 
                 <form id="form1">
                     <div class="mb-3 mt-3 form_head">
-                        <h5>Hotel Inventory Management System</h5>
-                        <p>Here you can Log into inventry Management System</p>
+                        <h5>Goods Purchase control System</h5>
+                        <p>Here you can Log into Goods Purchase control System</p>
                     </div>
                     <div class="mb-3 mt-3">
                         <label class="form-label">Username</label>

@@ -1735,7 +1735,15 @@
     <Content Include="DailyGuestCount.aspx" />
     <Content Include="ManageSubCategory.aspx" />
     <Content Include="ManageUser.aspx" />
+    <Content Include="script\page\dashboard.js" />
+    <Content Include="script\page\Employee.js" />
+    <Content Include="script\page\externalOrder.js" />
+    <Content Include="script\page\InternalOrder.js" />
+    <Content Include="script\page\LoadAllInternalOrders.js" />
     <Content Include="script\page\login.js" />
+    <Content Include="script\page\ManageCategory.js" />
+    <Content Include="script\page\manageItem.js" />
+    <Content Include="script\page\manageSubCategory.js" />
     <Content Include="script\page\manageUserAccount.js" />
     <Content Include="UserAccounts.aspx" />
     <Content Include="Web.config" />

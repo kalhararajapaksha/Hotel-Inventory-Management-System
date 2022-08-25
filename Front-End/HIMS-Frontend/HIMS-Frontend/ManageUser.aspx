@@ -79,6 +79,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="tab">
+                        <h6 id="reqMsg"></h6>
                         <div class="form-group">
                             <label>Employee:</label><span style="color: red">*</span>
                             <select class="js-example-basic-single col-sm-12 form-control select2-hidden-accessible" style="width: 100%;" id="drpEmployee">

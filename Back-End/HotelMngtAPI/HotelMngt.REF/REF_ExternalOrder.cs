@@ -19,5 +19,8 @@ namespace HotelMngt.REF
         public string RecivedDateAndTime { get; set; }
         public string ApprovedDate { get; set; }
         public int ApprovedBy { get; set; }
+        public int RecivedBy { get; set; }
+
     }
+
 }

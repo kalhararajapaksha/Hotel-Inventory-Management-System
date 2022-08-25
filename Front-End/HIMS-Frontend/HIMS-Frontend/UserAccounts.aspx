@@ -41,25 +41,22 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="display" id="basic-1">
+                            <table class="display" id="tblEmployee">
                                 <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
-                                        <th>Salary</th>
+                                        <th>Employee ID</th>
+                                        <th>Department ID</th>
+                                        <th>Employee Name</th>
+                                        <th>Address</th>
+                                        <th>Contact Number</th>
+                                        <th>Email</th>
+                                        <th>DOB</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
-                                        <td>$320,800</td>
+                              
                                     </tr>
 
                                 </tbody>
@@ -82,6 +79,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="tab">
+                        
                         <div class="form-group">
                             <label>Employee:</label><span style="color: red">*</span>
                             <select class="js-example-basic-single col-sm-12 form-control select2-hidden-accessible" style="width: 100%;" id="drpEmployee">
@@ -109,6 +107,7 @@
             </div>
         </div>
     </div>
+    <script src="../script/page/Employee.js"></script>
     <!--Model end-->
 
 </asp:Content>

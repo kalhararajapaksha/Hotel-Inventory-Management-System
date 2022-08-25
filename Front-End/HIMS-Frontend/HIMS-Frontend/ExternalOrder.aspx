@@ -14,7 +14,7 @@
                     <div class="bookmark">
 
                         <ul>
-                            <li><a class="btn btn-primary-light btn-xs" data-container="body" data-placement="top" data-bs-toggle="modal" data-bs-target="#exampleModalfat" data-whatever="@mdo" title="" data-original-title="Tables" onclick=""><i data-feather="plus"></i>Add New Category &nbsp;</a></li>
+                            <li><a class="btn btn-primary-light btn-xs" data-container="body" data-placement="top" data-bs-toggle="modal" data-bs-target="#exampleModalfat" data-whatever="@mdo" title="" data-original-title="Tables" onclick=""><i data-feather="plus"></i>New External Order &nbsp;</a></li>
 
                         </ul>
                     </div>
@@ -41,17 +41,23 @@
                         <div class="row post">
 
                             <div class="table-responsive">
-                                <table id="tblCategory" class="show-case">
+                                <table id="tblExternal" class="show-case">
                                     <thead>
                                         <tr>
                                             <th style="width: 12.5%">Order ID</th>
+                                            <th style="width: 12.5%">Item ID</th>
+                                            <th style="width: 12.5%">Available Quentity</th>
+                                            <th style="width: 12.5%" class="text-center py-0 align-middle">Requested Quentity</th>
+                                            <th style="width: 12.5%" class="text-center py-0 align-middle">Price Per Unit</th>
+                                            <th style="width: 12.5%">Action</th>
+<%--                                            <th style="width: 12.5%">Order ID</th>
                                             <th style="width: 12.5%">Item Name</th>
                                             <th style="width: 12.5%">Available Quentity</th>
                                             <th style="width: 12.5%" class="text-center py-0 align-middle">Requested Quentity</th>
                                             <th style="width: 12.5%">Price Per Unit</th>
                                             <th style="width: 12.5%">Order Date</th>
                                             <th style="width: 12.5%">Recived Date and Time</th>
-                                            <th style="width: 12.5%">Approved Date</th>
+                                            <th style="width: 12.5%">Approved Date</th>--%>
 
                                         </tr>
                                     </thead>
@@ -91,7 +97,7 @@
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    
                         <div class="form-group">
                             <label>Item :</label><span style="color: red">*</span>
                             <select class="js-example-basic-single col-sm-12 form-control select2-hidden-accessible" style="width: 100%;" id="drpItem"></select>
@@ -99,16 +105,22 @@
                         <div class="mb-3">
                             <input type="hidden" id="txtCatID" name="custId" value="-99">
                             <label class="col-form-label" for="recipient-name">Request Quentity:</label><span style="color: red">*</span>
-                            <input id="RequestQuentity" class="form-control" type="number" value="">
+                            <input id="txtRequestQuentity" class="form-control" type="number" value="">
                         </div>
-                    </form>
+                         <div class="mb-3">
+                            
+                            <label class="col-form-label" for="recipient-name">Price Per Unit:</label><span style="color: red">*</span>
+                            <input id="txtPricePerUnit" class="form-control" type="text" value="">
+                        </div>
+                    
                 </div>
                 <div class="modal-footer text-center" id="btndivcat">
                     <button class="btn btn-secondary" type="button" onclick="btnClose()" data-bs-dismiss="modal">Close</button>
-                    <button class="btn btn-primary" id="btnSubmit" onclick="AddCategory()" type="button">Save Category</button>
+                    <button class="btn btn-primary" id="btnSubmit" onclick="SetExternalOrder()" type="button">Save</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="../script/page/externalOrder.js"></script>
     <!--Modal End-->
 </asp:Content>
